@@ -15,4 +15,5 @@ synchronizedmm = synchronizedmm.*0.254;
 % Rain Gauge (Precip)
 figure
 plot(tenminutetime_PAS, tenminutetotal_PAS, tenminutetime_PAS, synchronizedmm);
-legend('MyPrecip', 'GuaboCamp');
+AX = legend('MyPrecip', 'GuaboCamp', 'northwest');
+set(AX,'FontSize',10);

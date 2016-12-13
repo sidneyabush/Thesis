@@ -10,4 +10,5 @@ load('CelestinoClean.mat');
 % Rain Gauge (MyPrecip)
 figure
 plot(tenminutetime_MAT, tenminutetotal_MAT, celestino.dates, celestino.precip1);
-legend('MyPrecipMAT', 'Celestino');
+AX = legend('MyPrecip', 'Celestino', 'northwest');
+set(AX,'FontSize',10);

@@ -31,5 +31,6 @@ GCtimestamps = (tenminutetime_PAS - hours(5));
 
 % Plot Guabo Camp (ten min res), PAS Precip and PAS tipping bucket runoff
 plot(GCtimestamps, synchronizedmm); 
-legend('PrecipPAS', 'Runoff UP', 'Runoff MID', 'Runoff LOW', 'Guabo Camp');
+AX = legend('PrecipPAS', 'Runoff UP', 'Runoff MID', 'Runoff LOW', 'Guabo Camp', 'northwest');
+set(AX,'FontSize',10);
 title('PAS/Guabo Camp Precip vs. Adjusted Tipping Bucket Runoff');

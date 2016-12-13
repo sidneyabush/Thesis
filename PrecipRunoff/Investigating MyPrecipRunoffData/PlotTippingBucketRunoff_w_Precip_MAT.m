@@ -23,5 +23,6 @@ load('CelestinoClean.mat');
 
 % Plot Celestino Tower (five min res), MAT Precip and MAT tipping bucket runoff
 plot(celestino.dates, celestino.precip1); 
-legend('PrecipMAT', 'Runoff UP', 'Runoff MID', 'Runoff LOW', 'Celestino');
+AX = legend('PrecipMAT', 'Runoff UP', 'Runoff MID', 'Runoff LOW', 'Celestino', 'northwest');
+set(AX,'FontSize',10);
 title('MAT/Celestino Tower Precip vs. Adjusted Tipping Bucket Runoff');
