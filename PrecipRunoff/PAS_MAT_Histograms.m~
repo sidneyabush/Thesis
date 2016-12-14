@@ -6,11 +6,11 @@ clear all;
 load('MAT_Precip.mat');
 % Import pasture data
 % [~,~,PAS_Precip,~,~,~] = import_pasture('PAS_PrecipRunoffOLD.csv',5, 36884);
-load('PAS_Precip.mat');
+
 
 
 % Generate histogram for pasture precipitation
-pas_precip_hist = histogram(PasPrecip_Precip(PasPrecip_Precip ~= 0));
+pas_precip_hist = histogram(PAS_Precip(PAS_Precip ~= 0));
 current_fig = gcf; 
 current_fig.Name = 'Pasture Precipitation Histogram';
 title('Pasture');
@@ -24,7 +24,7 @@ ylim([0 1000]);
 
 % Generate histogram for mature forest precipitation
 figure;
-mat_precip_hist = histogram(MatPrecip_Precip(MatPrecip_Precip ~= 0));
+mat_precip_hist = histogram(MAT_Precip(MAT_Precip ~= 0));
 current_fig = gcf; 
 current_fig.Name = 'Mature Forest Precipitation Histogram';
 title('Mature Forest');

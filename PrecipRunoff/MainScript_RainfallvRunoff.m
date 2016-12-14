@@ -50,8 +50,8 @@ currentYTicks = get(gca, 'YTick');
 set(gca, 'YTick', currentYTicks(1:end-1));
 set(gca,'ydir','reverse');
 linkaxes(ax,'x');
-% xlim([736470 736540]);
-xlim(datetime(2016,[5 7],[22 28]))
+xlim([736470 736540]);
+%xlim(datetime(2016,[5 7],[22 28]))
 %beginTime='22/05/2016 00:00:00';
 %endTime= '28/07/2016 00:00:00';
 %set(gca, 'XLim', [22/05/2016 00:00:00 28/07/2016 00:00:00]);
@@ -71,8 +71,8 @@ plot(allLL.forMidLL.timeStamp, allLL.forMidLL.heightMM, 'LineWidth', linewidth)
 % Lower
 plot(allLL.forLowLL.timeStamp, allLL.forLowLL.heightMM, 'LineWidth', linewidth);
 linkaxes(ax,'x');
-% xlim([736470 736540]);
-xlim(datetime(2016,[5 7],[22 28]))
+xlim([736470 736540]);
+%xlim(datetime(2016,[5 7],[22 28]))
 currentYTicks = get(gca, 'YTick');
 % Remove the last tick that would overlap with the top graph tick
 set(gca, 'YTick', currentYTicks(1:end-1));
@@ -122,8 +122,8 @@ currentYTicks = get(gca, 'YTick');
 set(gca, 'YTick', currentYTicks(1:end-1));
 set(gca,'ydir','reverse');
 linkaxes(ax,'x');
-% xlim([736470 736540]);
-xlim(datetime(2016,[5 7],[22 28]))
+xlim([736470 736540]);
+%xlim(datetime(2016,[5 7],[22 28]))
 %beginTime='22/05/2016 00:00:00';
 %endTime= '28/07/2016 00:00:00';
 %set(gca, 'XLim', [22/05/2016 00:00:00 28/07/2016 00:00:00]);
@@ -145,8 +145,8 @@ plot(allLL.pasMidLL.timeStamp, allLL.pasMidLL.heightMM, 'LineWidth', linewidth)
 plot(allLL.pasLowLL.timeStamp, allLL.pasLowLL.heightMM, 'LineWidth', linewidth);
 
 linkaxes(ax,'x');
-% xlim([736470 736540]);
-xlim(datetime(2016,[5 7],[22 28]))
+xlim([736470 736540]);
+%xlim(datetime(2016,[5 7],[22 28]))
 currentYTicks = get(gca, 'YTick');
 % Remove the last tick that would overlap with the top graph tick
 set(gca, 'YTick', currentYTicks(1:end-1));

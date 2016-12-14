@@ -23,19 +23,19 @@ for i = 1:length(timeValPairs)
     % make sure not to lump together precip and runoffs when averaging for
     % runoff ratio. 
     if i == 1
-        plot(times, values, '--', 'LineWidth', 4)
+        plot(times, values, '--', 'LineWidth', 2)
         precipSum = sum(values);
     else
-        plot(times, values, 'LineWidth', 4)
+        plot(times, values, 'LineWidth', 2)
         runoffSums = [runoffSums sum(values)];
     end 
 end
 
 legend(legendValues{:})
-ylabel('mm', 'FontSize', 20)
-xlabel('Time', 'FontSize', 20)
-title(plotTitle, 'FontSize', 20)
-set(gca,'FontSize',15)
+ylabel('mm', 'FontSize', 15)
+xlabel('Time', 'FontSize', 15)
+title(plotTitle, 'FontSize', 15)
+set(gca,'FontSize',10)
 hold off
 
 % Calculate and return the runoff ratio. 

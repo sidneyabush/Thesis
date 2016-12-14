@@ -18,24 +18,19 @@ hold on
 Convert_Rainfall_MAT_PAS_To_10min;
 
 %% Import Guabo Camp
-[GC_Timestamp,GC_tips] = importGC('GuaboCampPrecip_5_12_16 to 8_10_16.csv',3, 2654);
-[ synchronizedmm ] = SyncGuaboCamptoMyPrecipData( tenminutetime_PAS, GC_Timestamp); 
+% [GC_Timestamp,GC_tips] = importGC('GuaboCampPrecip_5_12_16 to 8_10_16.csv',3, 2654);
+% [ synchronizedmm ] = SyncGuaboCamptoMyPrecipData( tenminutetime_PAS, GC_Timestamp); 
 
 % convert to mm
-synchronizedmm = synchronizedmm.*0.254;
+% synchronizedmm = synchronizedmm.*0.254;
 
 % Guabo Camp Time stamps are consistently 5 hours ahead of my timestamps- 
 % adjust so they're the same
-GCtimestamps = (tenminutetime_PAS - hours(5)); 
+% GCtimestamps = (tenminutetime_PAS - hours(5)); 
 
 
 % Plot Guabo Camp (ten min res), PAS Precip and PAS tipping bucket runoff
-plot(GCtimestamps, synchronizedmm); 
-AX = legend('PrecipPAS', 'Runoff UP', 'Runoff MID', 'Runoff LOW', 'Guabo Camp', 'northeast');
-set(AX,'FontSize',5);
-title('PAS/Guabo Camp Precip vs. Adjusted Tipping Bucket Runoff', 'fontsize',5);
-set(gca,'FontSize',10);
-xlhand = get(gca,'xlabel');
-set(xlhand,'string','Time','fontsize',10);
-yhand = get(gca,'ylabel');
-set(yhand,'string','Rainfall/Runoff(mm)','fontsize',10);
+% plot(GCtimestamps, synchronizedmm); 
+% legend('PrecipPAS', 'Runoff UP', 'Runoff MID', 'Runoff LOW', 'Guabo Camp');
+legend('PrecipPAS', 'Runoff UP', 'Runoff MID', 'Runoff LOW');
+title('PAS Precip vs. Adjusted Tipping Bucket Runoff');

@@ -15,11 +15,4 @@ synchronizedmm = synchronizedmm.*0.254;
 % Rain Gauge (Precip)
 figure
 plot(tenminutetime_PAS, tenminutetotal_PAS, tenminutetime_PAS, synchronizedmm);
-title('Pasture Rainfall & Runoff', 'fontsize',10);
-AX = legend('MyPrecip', 'GuaboCamp', 'northwest');
-set(AX,'FontSize',5);
-set(gca,'FontSize',10);
-xlhand = get(gca,'xlabel');
-set(xlhand,'string','Time','fontsize',10);
-yhand = get(gca,'ylabel');
-set(yhand,'string','Precipitation (mm)','fontsize',10);
+legend('MyPrecip', 'GuaboCamp');

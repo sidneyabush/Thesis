@@ -19,15 +19,10 @@ plot(TIMESTAMP, Precip_Tot, TIMESTAMP, TR525_Up_Tot, TIMESTAMP, TR525_Mid_Tot, T
 hold on
 
 % Import Celestino Tower Data
-load('CelestinoClean.mat');
+% load('CelestinoClean.mat');
 
 % Plot Celestino Tower (five min res), MAT Precip and MAT tipping bucket runoff
-plot(celestino.dates, celestino.precip1); 
-AX = legend('PrecipMAT', 'Runoff UP', 'Runoff MID', 'Runoff LOW', 'Celestino', 'northweast');
-set(AX,'FontSize',10);
-title('MAT/Celestino Tower Precip vs. Adjusted Tipping Bucket Runoff');
-set(gca,'FontSize',10);
-xlhand = get(gca,'xlabel');
-set(xlhand,'string','Time','fontsize',10);
-yhand = get(gca,'ylabel');
-set(yhand,'string','Rainfall/ Runoff (mm)','fontsize',10);
+% plot(celestino.dates, celestino.precip1); 
+% legend('PrecipMAT', 'Runoff UP', 'Runoff MID', 'Runoff LOW', 'Celestino');
+legend('PrecipMAT', 'Runoff UP', 'Runoff MID', 'Runoff LOW');
+title('MAT Precip vs. Adjusted Tipping Bucket Runoff');

@@ -31,19 +31,19 @@ pastureStartDateIdx = find(PasPrecip_Times > startDate, 1);
 forestStartDateIdx = find(MatPrecip_Times > startDate, 1);
 
 figure;
-plot(MatPrecip_Times(forestStartDateIdx:end), cumulativeForestPrecip(forestStartDateIdx:end),'LineWidth',4);
+plot(MatPrecip_Times(forestStartDateIdx:end), cumulativeForestPrecip(forestStartDateIdx:end),'LineWidth',2);
 hold on;
-plot(PasPrecip_Times(pastureStartDateIdx:end), cumulativePasPrecip_Precip(pastureStartDateIdx:end),'LineWidth',4);
+plot(PasPrecip_Times(pastureStartDateIdx:end), cumulativePasPrecip_Precip(pastureStartDateIdx:end),'LineWidth',2);
 hold off;
 
 AX=legend('Forest', 'Pasture', 'Location', 'northwest');
-set(AX,'FontSize',15);
+set(AX,'FontSize',10);
 
-ylabel('Precipitation (mm)')
-xlabel('Time')
-title('Cumulative Precipitation for Mature Forest and Pasture', 'fontsize',20)
-set(gca,'FontSize',15)
-xlhand = get(gca,'xlabel')
-set(xlhand,'string','Time','fontsize',20)
-yhand = get(gca,'ylabel')
-set(yhand,'string','Precipitation (mm)','fontsize',20)
+ylabel('Precipitation (mm)');
+xlabel('Time');
+title('Cumulative Precipitation for Mature Forest and Pasture', 'fontsize',3);
+set(gca,'FontSize',10);
+xlhand = get(gca,'xlabel');
+set(xlhand,'string','Time','fontsize',10);
+yhand = get(gca,'ylabel');
+set(yhand,'string','Precipitation (mm)','fontsize',10);
